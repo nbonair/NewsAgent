@@ -1,0 +1,9 @@
+playwright 
+torch
+transformers
+langchain
+openai
+gradio
+python-dotenv
+pandas
+numpy
