@@ -26,7 +26,7 @@ class AgentCrawling:
 
 if __name__ == "__main__":
     agent = AgentCrawling()
-    page = agent.fetch_page("https://www.abc.net.au/news/justin")
+    page = agent.fetch_page("https://www.abc.net.au/news/justi")
     page_content = agent.extract_url(page)
     print(page_content)
     agent.close()
