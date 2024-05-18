@@ -10,14 +10,15 @@ class OpenAILLM:
 
     def interact(self, prompt: str) -> str:
         response = self.client.chat.completions.create(
-            model="davinci-002",
+            model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=15,
+            # prompt=prompt,
+            max_tokens=150,
             temperature=0.2
         )
-        return response.choices[0].message['content'].strip()
+        return response.choices[0]
     
-print(OpenAILLM().interact('Hello'))
+print(OpenAILLM().interact('Hello, who are you'))
